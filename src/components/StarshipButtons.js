@@ -3,28 +3,22 @@ import StarshipPage from './StarshipPage';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function StarshipButtons() {
-  const [shipData, setShipData] = useState('');
+function StarshipButtons(props) {
 
-  const handleNames = (e) => {
-    axios.get(`https://swapi.dev/api/starships/`).then(result => {
-      setShipData(result.data)
-    }).catch(err => {
-      console.log('error');
-    })
-  }
-  return (
-    <div>
-      <Route path='/starship' render={({location}) =>
-          <StarshipPage location={location}/>
-            }/>
-      <button onClick=></button>
-    </div>
-  )
-}
+  const nameButtons = props.map(<Link
+    to={{
+      pathname: '/starship',
+      state: starship
+    }}
+    key={starship.name}
+  >
+    {{starship.name}}
+  </Link>
 
-
-
-
+    return (
+      <div className="pane">
+      {nameButtons}
+      </div>
+    )
 
 export default StarshipButtons;
