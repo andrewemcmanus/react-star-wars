@@ -1,6 +1,7 @@
 
 function StarshipPage(props) {
   // const starshipModel = props.starships.model;
+  // const starshipName = props.starships.name;
 
   return (
     <div>
