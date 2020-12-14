@@ -5,8 +5,8 @@ function StarshipPage(props) {
 
   return (
     <div>
-      <p>Name: </p>
-      <p>Model:</p>
+      <p>Name: {props.starships.name}</p>
+      <p>Model:{props.starships.model}</p>
     </div>
   )
 }

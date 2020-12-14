@@ -1,4 +1,8 @@
-// import logo from './logo.svg';
+// data returns perfectly
+// Does this actually need shipId at all? 
+// How do you actually refer to the data downstream? Where does "location" come from?
+// Map 10 routes on this page? Or have a separate Buttons page?
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
@@ -12,7 +16,7 @@ function App() {
   const [shipId, setShipId] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
+      const fetchData = async () => {
       const response = await axios(`https://swapi.dev/api/starships/${shipId}`);
       setShipData(response.data);
     };
